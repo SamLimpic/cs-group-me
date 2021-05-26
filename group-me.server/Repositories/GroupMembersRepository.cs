@@ -23,9 +23,9 @@ namespace group_me.server.Repositories
             g.*
             a.*
             FROM groups g
-            JOIN profiles p ON g.creatorId = p.Id;
+            JOIN accounts a ON g.creatorId = a.Id;
             ";
-            return _db.Query<GroupMemberView, Profile, GroupMemberView>(sql, (g, p) =>
+            return _db.Query<GroupMemberView, Account, GroupMemberView>(sql, (g, a) =>
             {
                 return g;
             }, splitOn: "id").ToList();
