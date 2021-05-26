@@ -67,9 +67,11 @@ namespace group_me_server
 
             services.AddScoped<AccountsService>();
             services.AddTransient<GroupsService>();
+            services.AddTransient<GroupMembersService>();
 
             services.AddScoped<AccountsRepository>();
             services.AddTransient<GroupsRepository>();
+            services.AddTransient<GroupMembersRepository>();
 
             // TODO[epic=DB] database Connection
             services.AddScoped<IDbConnection>(x => CreateDbConnection());

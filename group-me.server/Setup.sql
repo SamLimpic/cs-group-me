@@ -4,4 +4,4 @@ CREATE TABLE profiles (
   email VARCHAR(255) NOT NULL,
   picture VARCHAR(255) NOT NULL,
   PRIMARY KEY (id)
-)
+);

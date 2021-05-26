@@ -11,4 +11,5 @@ namespace group_me.server.Models
 
         public Profile Creator { get; set; }
     }
+
 }
