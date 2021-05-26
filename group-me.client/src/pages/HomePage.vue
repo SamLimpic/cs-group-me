@@ -8,8 +8,20 @@
 </template>
 
 <script>
+import { computed, onMounted, reactive } from 'vue'
+import { AppState } from '../AppState'
 export default {
-  name: 'Home'
+  name: 'Home',
+  setup() {
+    const state = reactive({
+      loading: true,
+      Groups: computed(() => AppState.Groups)
+    })
+    onMounted(async() => {})
+    return {
+      state
+    }
+  }
 }
 </script>
 

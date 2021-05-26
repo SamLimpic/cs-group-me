@@ -1,8 +1,8 @@
 using System.Data;
-using cs_group_me_server.Models;
+using group_me.server.Models;
 using Dapper;
 
-namespace cs_group_me_server.Repositories
+namespace group_me.server.Repositories
 {
     public class AccountsRepository
     {

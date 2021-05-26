@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using cs_group_me_server.Repositories;
-using cs_group_me_server.Services;
+using group_me.server.Repositories;
+using group_me.server.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -65,9 +65,11 @@ namespace group_me_server
 
 
 
-            services.AddTransient<AccountsService>();
+            services.AddScoped<AccountsService>();
+            services.AddTransient<GroupsService>();
 
-            services.AddTransient<AccountsRepository>();
+            services.AddScoped<AccountsRepository>();
+            services.AddTransient<GroupsRepository>();
 
             // TODO[epic=DB] database Connection
             services.AddScoped<IDbConnection>(x => CreateDbConnection());

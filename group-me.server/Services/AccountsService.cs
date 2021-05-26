@@ -1,8 +1,8 @@
 using System;
-using cs_group_me_server.Models;
-using cs_group_me_server.Repositories;
+using group_me.server.Models;
+using group_me.server.Repositories;
 
-namespace cs_group_me_server.Services
+namespace group_me.server.Services
 {
     public class AccountsService
     {

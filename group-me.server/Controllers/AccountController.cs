@@ -1,12 +1,12 @@
 using System;
 using System.Threading.Tasks;
 using CodeWorks.Auth0Provider;
-using cs_group_me_server.Models;
-using cs_group_me_server.Services;
+using group_me.server.Models;
+using group_me.server.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace cs_group_me_server.Controllers
+namespace group_me.server.Controllers
 {
     [ApiController]
     [Route("[controller")]
